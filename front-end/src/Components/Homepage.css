@@ -94,3 +94,27 @@ header {
     text-transform: capitalize;
     word-spacing: 2px;
 }
+
+#btn-tag {
+    color: blue;
+}
+
+#srchs {
+    color: black;
+}
+
+.design {
+    padding: 4.5rem 0;
+}
+
+.title {
+    text-align: center;
+    padding: 1rem 0;
+    margin-right: 100px;
+}
+
+.title h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
