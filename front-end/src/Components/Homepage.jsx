@@ -30,55 +30,68 @@ function Homepage() {
                     </div>
                 </div>
             </header>
-            <section className='design' >
+            <section className='design' id='design' >
                 <div className="container-head">
                     <div className="title">
                         <h2>Arts</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fugiat sapiente quibusdam, nostrum placeat aut exercitationem, odit minima inventore illo, veritatis quo quidem perferendis aliquid mollitia! Quis repellat exercitationem sit.</p>
                     </div>
-                </div>
-                <div className="design-cnt">
-                    <div className="design-item">
-                        <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
-                    </div>
-                    <div className="design-title">
-                        <a href="">Make an awesome art</a>
-                    </div>
-                </div>
 
-            </section>
-            <section className='design' id='design' >
-                {/* <div className="container-head">
-                    <div className="title">
-                        <h2>Arts</h2>
-                    </div>
-                </div> */}
-                <div className="design-cnt">
-                    <div className="design-item">
-                        <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
-                    </div>
-                    <div className="design-title">
-                        <a href="">Make an awesome art</a>
-                    </div>
-                </div>
 
-            </section>
-            <section className='design' id='design' >
-                {/* <div className="container-head">
-                    <div className="title">
-                        <h2>Arts</h2>
-                    </div>
-                </div> */}
-                <div className="design-cnt">
-                    <div className="design-item">
-                        <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
-                    </div>
-                    <div className="design-title">
-                        <a href="">Make an awesome art</a>
+                    <div className="design-content">
+
+
+
+                        <div className="design-item">
+                            <div className="design-img">
+                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
+                                {/* <span>Art&design</span> */}
+                            </div>
+                            <div className="design-title">
+                                <a href="">Make an awesome art</a>
+                            </div>
+                        </div>
+
+
+                        <div className="design-item">
+                            <div className="design-img">
+                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
+                                {/* <span>Art&design</span> */}
+                            </div>
+                            <div className="design-title">
+                                <a href="">Make an awesome art</a>
+                            </div>
+                        </div>
+
+                        <div className="design-item">
+                            <div className="design-img">
+                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
+                                {/* <span>Art&design</span> */}
+                            </div>
+                            <div className="design-title">
+                                <a href="">Make an awesome art</a>
+                            </div>
+                        </div>
+
+                        <div className="design-item">
+                            <div className="design-img">
+                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
+                                {/* <span>Art&design</span> */}
+                            </div>
+                            <div className="design-title">
+                                <a href="" className='paragrah' >Make an awesome art</a>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
             </section>
         </div>
+
+
+
     )
 }
 
