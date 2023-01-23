@@ -30,7 +30,7 @@ function Homepage() {
                     </div>
                 </div>
             </header>
-            <section className='design' id='design' >
+            <section className='design' >
                 <div className="container-head">
                     <div className="title">
                         <h2>Arts</h2>
@@ -38,7 +38,7 @@ function Homepage() {
                 </div>
                 <div className="design-cnt">
                     <div className="design-item">
-                        <img src="https://wallpaperaccess.com/full/352112.jpg" alt="" />
+                        <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
                     </div>
                     <div className="design-title">
                         <a href="">Make an awesome art</a>
@@ -47,14 +47,14 @@ function Homepage() {
 
             </section>
             <section className='design' id='design' >
-                <div className="container-head">
+                {/* <div className="container-head">
                     <div className="title">
                         <h2>Arts</h2>
                     </div>
-                </div>
+                </div> */}
                 <div className="design-cnt">
                     <div className="design-item">
-                        <img src="https://wallpaperaccess.com/full/352112.jpg" alt="" />
+                        <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
                     </div>
                     <div className="design-title">
                         <a href="">Make an awesome art</a>
@@ -63,14 +63,14 @@ function Homepage() {
 
             </section>
             <section className='design' id='design' >
-                <div className="container-head">
+                {/* <div className="container-head">
                     <div className="title">
                         <h2>Arts</h2>
                     </div>
-                </div>
+                </div> */}
                 <div className="design-cnt">
                     <div className="design-item">
-                        <img src="https://wallpaperaccess.com/full/352112.jpg" alt="" />
+                        <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
                     </div>
                     <div className="design-title">
                         <a href="">Make an awesome art</a>

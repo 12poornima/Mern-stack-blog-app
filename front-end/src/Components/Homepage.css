@@ -112,9 +112,9 @@ header {
     margin-bottom: 15px;
 }
 
-.design {
+/* .design {
     padding: 4.5rem 0;
-}
+} */
 
 .title {
     text-align: center;
@@ -126,4 +126,14 @@ header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.4rem;
     margin-bottom: 20px;
+}
+
+.image1 {
+    width: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.design-cnt {
+    margin: 0;
 }
