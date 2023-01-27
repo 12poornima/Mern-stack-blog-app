@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-size: cover;
+}
+
+.head {
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    margin-top: 10px;
+    margin-left: 25px;
+    /* padding-top: 20px; */
+
+}
+
+.container2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 550px;
+    padding: 20px 100px;
+    margin-right: 500px;
+
+}
+
+.container:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url(https://media.istockphoto.com/id/1265192451/photo/flat-lay-of-office-desk-wooden-table-with-laptop-and-smartphone-and-equipment-other-office.jpg?b=1&s=170667a&w=0&k=20&c=aFzpWhTY4It01Giw6bH6rzditU4fQ9SjgkO2igqoMxY=) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(20px); */
+}
+
+.contact-box {
+    max-width: 950px;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(121, 120, 120);
+    height: 650px;
+    width: 740px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    ;
+}
+
+.left {
+    height: 100%;
+    /* background: url(https://media.istockphoto.com/id/1265192451/photo/flat-lay-of-office-desk-wooden-table-with-laptop-and-smartphone-and-equipment-other-office.jpg?b=1&s=170667a&w=0&k=20&c=aFzpWhTY4It01Giw6bH6rzditU4fQ9SjgkO2igqoMxY=) no-repeat center;
+    background-size: cover; */
+}
+
+.right {
+    padding: 150px 60px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    margin-right: 90px;
+
+}
+
+.field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230, 230, 230, 0.6);
+    border: 2px solid rgb(0, 0, 0, 0);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.field:focus {
+    background-color: #fff;
+    border: 2px solid rgb(30, 85, 250, 0.47);
+}
+
+.area {
+    min-height: 150px;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #fefdfd;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: black;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: rgb(121, 120, 120);
+}
