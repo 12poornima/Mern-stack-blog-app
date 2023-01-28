@@ -13,6 +13,7 @@ function Homepage() {
                             <a href="">Home</a>
                             <a href="">Design</a>
                             <a href="">Blog</a>
+                            <a href="#">Blog Adding </a>
                             <a href="">About</a>
                         </div>
                     </div>
