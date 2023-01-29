@@ -1,9 +1,15 @@
 import React from 'react'
 import "./Homepage.css"
+import { useNavigate } from 'react-router-dom'
 
 function Homepage() {
-    return (
+    const navigate = useNavigate()
 
+    async function blogbtn() {
+        navigate("/blogadded")
+    }
+
+    return (
         <div className='main' >
             <header>
                 <nav className="navbar">
@@ -13,7 +19,7 @@ function Homepage() {
                             <a href="">Home</a>
                             <a href="">Design</a>
                             <a href="">Blog</a>
-                            <a href="#">Blog Adding </a>
+                            <a href="#" onClick={blogbtn}>Blog Adding </a>
                             <a href="">About</a>
                         </div>
                     </div>
