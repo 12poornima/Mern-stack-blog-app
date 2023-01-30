@@ -1,13 +1,25 @@
 import React from 'react'
 import "./Homepage.css"
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import axios from 'axios'
+import { useEffect } from 'react'
 
 function Homepage() {
+    const getAllBlog = async () => {
+        let response = await axios.get("http://localhost:5000/getBlog")
+        console.log(response)
+    }
+
     const navigate = useNavigate()
 
     async function blogbtn() {
         navigate("/blogadded")
     }
+    useEffect(() => {
+        getAllBlog()
+
+    }, [])
 
     return (
         <div className='main' >
