@@ -34,7 +34,7 @@ function BlogAddedPage() {
         }
     }
     return (
-        <div className='container2' >
+        <div className='blog-container2' >
             <div className='contact-box' >
                 <div className="left">
                     <div className="right">

@@ -3,6 +3,7 @@ import BlogAddedPage from "./Components/BlogAddedPage"
 import Homepage from "./Components/Homepage"
 import LoginPage from "./Components/LoginPage"
 import Signup from "./Components/Signup"
+import SingleBlogPage from "./Components/SingleBlogPage"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="home" element={<Homepage />} />
           <Route path="blogadded" element={<BlogAddedPage />} />
+          <Route path="singleblogpage" element={<SingleBlogPage />} />
         </Routes >
       </BrowserRouter >
     </div>

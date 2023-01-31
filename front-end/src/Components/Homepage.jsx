@@ -4,11 +4,16 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
+import SingleCard from './SingleCard'
 
 function Homepage() {
+    const [allBlogs, SetAllBlogs] = useState()
     const getAllBlog = async () => {
         let response = await axios.get("http://localhost:5000/getBlog")
         console.log(response)
+        if (response.data.sucess) {
+            SetAllBlogs(response.data.allBlog)
+        }
     }
 
     const navigate = useNavigate()
@@ -58,49 +63,11 @@ function Homepage() {
 
 
                     <div className="design-content">
-
-
-
-                        <div className="design-item">
-                            <div className="design-img">
-                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
-                                {/* <span>Art&design</span> */}
-                            </div>
-                            <div className="design-title">
-                                <a href="">Make an awesome art</a>
-                            </div>
-                        </div>
-
-
-                        <div className="design-item">
-                            <div className="design-img">
-                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
-                                {/* <span>Art&design</span> */}
-                            </div>
-                            <div className="design-title">
-                                <a href="">Make an awesome art</a>
-                            </div>
-                        </div>
-
-                        <div className="design-item">
-                            <div className="design-img">
-                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
-                                {/* <span>Art&design</span> */}
-                            </div>
-                            <div className="design-title">
-                                <a href="">Make an awesome art</a>
-                            </div>
-                        </div>
-
-                        <div className="design-item">
-                            <div className="design-img">
-                                <img src="https://wallpaperaccess.com/full/352112.jpg" className='image1' alt="" />
-                                {/* <span>Art&design</span> */}
-                            </div>
-                            <div className="design-title">
-                                <a href="" className='paragrah' >Make an awesome art</a>
-                            </div>
-                        </div>
+                        {
+                            allBlogs && allBlogs.map((b) => {
+                                return <SingleCard blogData={b} />
+                            })
+                        }
 
 
                     </div>
