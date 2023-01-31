@@ -6,7 +6,7 @@ function SingleBlogPage() {
         <div>
             <div className="single-card">
                 <div className="single-box">
-                    <h1 className='title-head' >title</h1>
+                    <h1 className='title-head' >Title</h1>
                     <p className='para-lorem' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis modi quia assumenda deleniti cumque eius quisquam voluptatibus inventore aliquam, tempora repellat commodi error nesciunt ipsa ab perferendis! Sed, error fugiat?</p>
                 </div>
 
