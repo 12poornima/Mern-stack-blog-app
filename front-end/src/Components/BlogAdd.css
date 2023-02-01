@@ -68,7 +68,7 @@ body {
 }
 
 .right {
-    padding: 150px 60px;
+    padding: 50px 70px;
     width: 100%;
     font-size: 30px;
     text-align: center;
@@ -109,8 +109,13 @@ body {
     border: none;
     color: black;
     transition: .3s;
+    margin-top: 20px;
 }
 
 .btn:hover {
     background-color: rgb(121, 120, 120);
+}
+
+.category {
+    margin-left: 100px;
 }
