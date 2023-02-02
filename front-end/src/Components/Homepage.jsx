@@ -26,6 +26,11 @@ function Homepage() {
 
     }, [])
 
+    async function btnCate() {
+        let response = await axios.get("http://localhost:5000/blog-by-category/sports")
+        console.log(response);
+    }
+
 
     return (
         <div className='main' >
@@ -35,7 +40,7 @@ function Homepage() {
                         <h1 className='navbar-brand' >Art Design</h1>
                         <div className="navbar-nav">
                             <a href="">Home</a>
-                            <a href="">Design</a>
+                            <a href="" onClick={btnCate} >Categoryes</a>
                             <a href="">Blog</a>
                             <a href="#" onClick={blogbtn}>Blog Adding </a>
                             <a href="">About</a>
