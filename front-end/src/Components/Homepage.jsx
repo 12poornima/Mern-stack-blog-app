@@ -5,6 +5,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import SingleCard from './SingleCard'
+import DropDown from './DropDown'
 
 function Homepage() {
     const [allBlogs, SetAllBlogs] = useState()
@@ -39,11 +40,12 @@ function Homepage() {
                     <div className="container">
                         <h1 className='navbar-brand' >Art Design</h1>
                         <div className="navbar-nav">
-                            <a href="">Home</a>
-                            <a href="" onClick={btnCate} >Categoryes</a>
+
+                            <a href="" className='home' >Home</a>
                             <a href="">Blog</a>
                             <a href="#" onClick={blogbtn}>Blog Adding </a>
                             <a href="">About</a>
+                            <DropDown />
                         </div>
                     </div>
                 </nav>

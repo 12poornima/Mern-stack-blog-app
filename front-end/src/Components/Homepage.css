@@ -40,13 +40,14 @@ header {
 }
 
 .navbar {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(32, 32, 32, 0.6);
     padding: 1.1rem;
 }
 
 .navbar-brand {
-    color: #fff;
-    font-size: 2rem;
+    color: rgb(254, 253, 253);
+    font-size: 3rem;
+    margin-top: 10px;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -70,7 +71,7 @@ header {
     padding: 0.4rem 0.1rem;
     letter-spacing: 3px;
     transition: opacity 0.5s ease;
-    margin-left: 40px;
+    margin-left: 25px;
 }
 
 .banner {
