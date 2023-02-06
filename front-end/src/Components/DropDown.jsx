@@ -10,10 +10,9 @@ function DropDown() {
                 <li className='cateeee' > <a href=""  >Category</a> <ArrowDropDownIcon />
                     <ul className='drop' >
                         <li><Link to="/category-blog" >Arts</Link></li>
-                        <li><a href="">Tech</a></li>
-                        <li><a href="">Science</a></li>
-                        <li><a href="">Sports</a></li>
-                        <li><a href="">Others</a></li>
+                        <li><Link to="/category-blog" >Tech</Link></li>
+                        <li><Link to="/category-blog" >Sports</Link></li>
+                        <li><Link to="/category-blog" >Others</Link></li>
                     </ul>
                 </li>
             </ul  >
