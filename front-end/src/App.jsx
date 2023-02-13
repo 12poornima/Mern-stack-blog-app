@@ -18,7 +18,7 @@ function App() {
           <Route path="home" element={<Homepage />} />
           <Route path="blogadded" element={<BlogAddedPage />} />
           <Route path="singleblogpage" element={<SingleBlogPage />} />
-          <Route path="category-blog" element={<CategoryBlog />} />
+          <Route path="category-blog/:categorey" element={<CategoryBlog />} />
         </Routes >
       </BrowserRouter >
     </div>

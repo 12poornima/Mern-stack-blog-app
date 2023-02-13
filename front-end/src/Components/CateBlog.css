@@ -19,22 +19,30 @@
     font-family: 'Abril Fatface', cursive;
     color: white;
     font-size: 28px;
+    padding-bottom: 10px;
+
 }
 
-nav {
+.sprts {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 40px;
     padding-left: 10%;
     padding-right: 10%;
-}
+} */
 
 span {
     color: #ea1538;
 }
 
-nav ul li {
+/* nav ul li {
     list-style-type: none;
     display: inline-block;
     padding: 10px 20px;
@@ -44,9 +52,44 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
+} */
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     color: #ea1538;
     transition: .3s;
+} */
+.card-lists {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cont-cate {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    /* align-items: center; */
+    border: none;
+    /* background-color: #ea1538; */
+}
+
+.cate-card {
+    background-color: rgb(134, 134, 134);
+    height: 500px;
+    width: 550px;
+    /* border: none; */
+    /* border-style: solid; */
+}
+
+.cate-head {
+    margin-left: 130px;
+}
+
+.img-sprts {
+    /* height: 390px; */
+    width: 200px;
+    margin-left: 120px;
+    margin-top: 20px;
 }
