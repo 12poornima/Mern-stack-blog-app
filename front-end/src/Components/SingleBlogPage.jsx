@@ -18,6 +18,14 @@ function SingleBlogPage() {
                         categorey={location.state.categorey
                         }
                     </div>
+                    <div className='cmnt-lists' >
+                        <div className='cmnt-cardz' >
+                            <h1 className='addyour' >Add Your Comments</h1>
+                            <input type="text" placeholder='Name' className='cmntname' />
+                            <textarea name="" placeholder='Enter Your Comments' className='textarea' id="" cols="30" rows="10"></textarea>
+                            <button className='cmnt-btn' >Submit</button>
+                        </div>
+                    </div>
 
                 </div>
 

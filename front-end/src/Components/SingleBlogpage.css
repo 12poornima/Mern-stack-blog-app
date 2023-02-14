@@ -14,15 +14,15 @@ body {
 
 .single-box {
     background: linear-gradient(rgba(244, 73, 73, 0.4), rgba(18, 17, 17, 0.4));
-    height: 650px;
-    width: 750px;
+    height: 100vh;
+    width: 100vw;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .title-head {
     /* font-family: sans-serif; */
-    margin-left: 200px;
-    margin-top: 30px;
+    margin-left: 20px;
+    margin-top: 60px;
     font-family: 'DM Serif Display', serif;
 
 }
@@ -45,11 +45,67 @@ body {
 }
 
 .cat {
-    margin-top: 20px;
+    margin-bottom: 90px;
     margin-left: 250px;
-    padding-top: 20px;
+    padding-top: 28px;
     font-size: xx-large;
     font-family: 'DM Serif Display', serif;
+}
 
+.cmnt-lists {
+    display: flex;
+    margin-left: 200px;
+    padding: 10px;
+}
 
+.cmnt-cardz {
+    padding: 10px;
+    height: 450px;
+    width: 550px;
+    background: rgb(191, 159, 159);
+    margin-left: 600px;
+    margin-top: -350px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.addyour {
+    margin-left: 120px;
+    margin-top: 30px;
+    font-family: 'DM Serif Display', serif;
+}
+
+.cmntname {
+    /* margin-top: 90px; */
+    color: rgb(5, 5, 5);
+    width: 500px;
+    height: 40px;
+    align-items: center;
+    background-color: rgb(250, 249, 249);
+    /* font-family: 'Satisfy', cursive; */
+    font-size: small;
+    /* margin-left: 900px; */
+    border-radius: 10px;
+    /* margin-bottom: 85px; */
+    margin-left: 23px;
+}
+
+.textarea {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 160px;
+    margin-top: 25px;
+}
+
+.cmnt-btn {
+    color: rgb(8, 8, 8);
+    width: 75px;
+    height: 40px;
+    align-items: center;
+    background-color: rgb(251, 249, 251);
+    /* font-family: 'Satisfy', cursive; */
+    font-size: larger;
+    /* margin-left: 90px; */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-family: 'DM Serif Display', serif;
 }
