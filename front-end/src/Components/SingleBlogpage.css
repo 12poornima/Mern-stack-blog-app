@@ -96,6 +96,11 @@ body {
     margin-top: 25px;
 }
 
+.user-name {
+    font-family: 'DM Serif Display', serif;
+
+}
+
 .cmnt-btn {
     color: rgb(8, 8, 8);
     width: 75px;
@@ -107,5 +112,36 @@ body {
     /* margin-left: 90px; */
     border-radius: 10px;
     margin-bottom: 15px;
+    font-family: 'DM Serif Display', serif;
+}
+
+.viewcmnt {
+    display: flex;
+    padding: 10px;
+}
+
+.cmnt_read {
+    padding: 5px;
+    height: 200px;
+    width: 550px;
+    background: rgb(191, 159, 159);
+    /* margin-left: 600px; */
+    margin-top: -161px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+}
+
+.cmnt-para {
+    font-family: 'DM Serif Display', serif;
+
+}
+
+.view-cmnt {
+    color: rgb(8, 8, 8);
+    width: 189px;
+    height: 40px;
+    align-items: center;
+    background-color: rgb(251, 249, 251);
     font-family: 'DM Serif Display', serif;
 }
