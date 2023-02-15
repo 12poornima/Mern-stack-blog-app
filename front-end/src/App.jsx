@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import BlogAddedPage from "./Components/BlogAddedPage"
+import BlogEditing from "./Components/BlogEditing"
 import CategoryBlog from "./Components/CategoryBlog"
 import Homepage from "./Components/Homepage"
 import LoginPage from "./Components/LoginPage"
@@ -19,6 +20,7 @@ function App() {
           <Route path="blogadded" element={<BlogAddedPage />} />
           <Route path="singleblogpage" element={<SingleBlogPage />} />
           <Route path="category-blog/:categorey" element={<CategoryBlog />} />
+          <Route path="editblog" element={<BlogEditing />} />
         </Routes >
       </BrowserRouter >
     </div>

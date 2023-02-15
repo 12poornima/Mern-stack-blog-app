@@ -121,12 +121,12 @@ body {
 }
 
 .cmnt_read {
-    padding: 5px;
+    /* padding: 5px; */
     height: 200px;
     width: 550px;
     background: rgb(191, 159, 159);
     /* margin-left: 600px; */
-    margin-top: -161px;
+    /* margin-top: 145px; */
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
