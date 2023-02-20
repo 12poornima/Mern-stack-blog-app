@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 body {
     background: rgb(178, 178, 247);
 }
@@ -7,7 +9,50 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
+    width: 500px;
+    height: 650px;
+    background: rgb(254, 254, 254);
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+input {
+    border: none;
+}
+
+.head-title {
+    margin-left: 135px;
+    margin-top: 20px;
+    font-family: 'Righteous', cursive;
+
+}
+
+.custom-select {
+    /* position: relative; */
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.select-div {
+    width: 100px;
+    border: none;
+    color: black;
+    font-family: 'Righteous', cursive;
+
+}
+
+.btn-for-sub {
+    margin-top: 5px;
+    margin-left: 200px;
+    color: rgb(252, 250, 250);
+    height: 30px;
+    width: 90px;
+    background: rgb(6, 6, 6);
+    font-family: 'Righteous', cursive;
+
+}
+
+.editing3 {
+    margin: 40px;
 }
