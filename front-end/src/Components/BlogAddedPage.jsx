@@ -38,6 +38,9 @@ function BlogAddedPage() {
             alert("validation error")
         }
     }
+    // async function editbtn() {
+    //     navigate("/editblog")
+    // }
     return (
         <div className='blog-container2' >
             <div className='contact-box' >
@@ -56,6 +59,7 @@ function BlogAddedPage() {
                             <option value="Others">Others</option>
                         </select>
                         <button className='btn' onClick={addBlog} >Send</button>
+                        {/* <button onClick={editbtn} >Edit Your Blog</button> */}
                     </div>
                 </div>
             </div>

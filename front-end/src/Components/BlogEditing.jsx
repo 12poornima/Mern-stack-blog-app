@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./BlogEditing.css"
 
 function BlogEditing() {
+    const userTitleRef = useRef()
+    const userDiscriptionRef = useRef()
+    const userDateRef = useRef()
+    const userImageRef = useRef()
+
+
+    async function btnedit() {
+        let obj = { title: userTitleRef.current.value, discription: userDiscriptionRef.current.value, date: userDateRef.current.value, imageurl: userImageRef.current.value, categorey: categoreyRef.current.value }
+        console.log(obj)
+    }
     return (
         <div>
             <div className="center">
@@ -10,19 +20,19 @@ function BlogEditing() {
                     <form id='frm1' >
                         <div className='txt' >
                             <label >Title</label>
-                            <input type="text" required className='input' />
+                            <input type="text" ref={userTitleRef} required className='input' />
                         </div>
                         <div className="editing1">
                             <label htmlFor="">Discription</label>
-                            <input type="text" required className='input2' />
+                            <input type="text" ref={userDiscriptionRef} required className='input2' />
                             {/* <textarea name="" id="" cols="30" rows="10"></textarea> */}
                         </div>
                         <div className="editing2">
                             <label htmlFor="">Image</label>
-                            <input type="text" />
+                            <input type="text" ref={userImageRef} />
                         </div>
                         <div className="editing3">
-                            <input type="date" required className='input3' />
+                            <input type="date" ref={userDateRef} required className='input3' />
                             {/* <label htmlFor="">Date </label> */}
 
                         </div>
@@ -38,7 +48,7 @@ function BlogEditing() {
                                 <option value="Others">Others</option>
                             </select>
                         </div>
-                        <button className='btn-for-sub' >SUBMIT</button>
+                        <button className='btn-for-sub' onClick={btnedit} >SUBMIT</button>
 
 
                     </form>

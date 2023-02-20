@@ -1,11 +1,16 @@
 import axios from 'axios';
 import React, { useRef } from 'react'
-import { useLocation } from 'react-router-dom'
+import { Navigate, useLocation } from 'react-router-dom'
 import "./SingleBlogpage.css"
+import { useNavigate } from 'react-router-dom'
+
 
 function SingleBlogPage() {
+    const navigate = useNavigate()
+
     const location = useLocation()
     console.log(location.state);
+
 
     const userNameRef = useRef()
     const comntTextRef = useRef()
@@ -23,6 +28,9 @@ function SingleBlogPage() {
             alert("validation error")
         }
     }
+    async function editBlog() {
+        navigate("/editblog")
+    }
     return (
         <div>
             <div className="single-card">
@@ -36,6 +44,7 @@ function SingleBlogPage() {
                         categorey={location.state.categorey
                         }
                     </div>
+                    <button className='editBlog' onClick={editBlog} >Edit Your Blog</button>
                     <div className='cmnt-lists' >
                         <div className='cmnt-cardz' >
                             <h1 className='addyour' >Add Your Comments</h1>
@@ -72,9 +81,6 @@ function SingleBlogPage() {
                             <button className='view-cmnt' >View New Comments</button>
                         </div>
                     </div>
-
-
-
                 </div>
 
             </div>
