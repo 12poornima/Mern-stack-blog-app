@@ -1,11 +1,13 @@
 import axios from 'axios';
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import "./SingleBlogpage.css"
 import { useNavigate } from 'react-router-dom'
+import CmntOneCard from './cmntOneCard';
 
 
 function SingleBlogPage() {
+    const [cmntBlog, setCmntBlog] = useState([])
     const navigate = useNavigate()
 
     const location = useLocation()
@@ -29,8 +31,19 @@ function SingleBlogPage() {
         }
     }
     async function editBlog() {
-        navigate("/editblog")
+        navigate("/editblog", { state: location.state })
     }
+
+    async function cmntPage() {
+        let response = await axios.get(`http://localhost:5000/cmnt-blog/${location.state._id}`)
+        console.log(response)
+        if (response.data.sucess) {
+            setCmntBlog(response.data.allCmnts)
+        }
+    }
+    useEffect(() => {
+        cmntPage()
+    }, [])
     return (
         <div>
             <div className="single-card">
@@ -53,34 +66,14 @@ function SingleBlogPage() {
                             <button className='cmnt-btn' onClick={BlogBtnSubmit} >Submit</button>
                         </div>
                     </div>
-                    <div className="viewcmnt">
-                        <div className="cmnt_read">
-                            <h3 className='user-name'>Poornima</h3>
-                            <p className='cmnt-para' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quibusdam, ratione saepe commodi laudantium nam quae reiciendis impedit eius optio consequuntur aperiam cum excepturi fugit pariatur voluptates incidunt provident blanditiis?</p>
-                            <button className='view-cmnt' >View New Comments</button>
-                        </div>
-                    </div>
-                    <div className="viewcmnt">
-                        <div className="cmnt_read">
-                            <h3 className='user-name'>Keerthana</h3>
-                            <p className='cmnt-para' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quibusdam, ratione saepe commodi laudantium nam quae reiciendis impedit eius optio consequuntur aperiam cum excepturi fugit pariatur voluptates incidunt provident blanditiis?</p>
-                            <button className='view-cmnt' >View New Comments</button>
-                        </div>
-                    </div>
-                    <div className="viewcmnt">
-                        <div className="cmnt_read">
-                            <h3 className='user-name'>Anusree</h3>
-                            <p className='cmnt-para' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quibusdam, ratione saepe commodi laudantium nam quae reiciendis impedit eius optio consequuntur aperiam cum excepturi fugit pariatur voluptates incidunt provident blanditiis?</p>
-                            <button className='view-cmnt' >View New Comments</button>
-                        </div>
-                    </div>
-                    <div className="viewcmnt">
-                        <div className="cmnt_read">
-                            <h3 className='user-name'>Abhi</h3>
-                            <p className='cmnt-para' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quibusdam, ratione saepe commodi laudantium nam quae reiciendis impedit eius optio consequuntur aperiam cum excepturi fugit pariatur voluptates incidunt provident blanditiis?</p>
-                            <button className='view-cmnt' >View New Comments</button>
-                        </div>
-                    </div>
+
+                    {
+                        cmntBlog && cmntBlog.map((a) => {
+                            return <CmntOneCard blogCmntss={a} />
+                        })
+                    }
+
+
                 </div>
 
             </div>

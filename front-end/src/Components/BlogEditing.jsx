@@ -1,44 +1,70 @@
-import React, { useRef } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 import "./BlogEditing.css"
 
 function BlogEditing() {
-    const userTitleRef = useRef()
-    const userDiscriptionRef = useRef()
-    const userDateRef = useRef()
-    const userImageRef = useRef()
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location.state);
+
+    const [title, setTitle] = useState("")
+    const [discription, setDiscrition] = useState("")
+    const [image, setImage] = useState("")
+    const [date, setDate] = useState("")
+    const [categorey, setCategoery] = useState("")
 
 
-    async function btnedit() {
-        let obj = { title: userTitleRef.current.value, discription: userDiscriptionRef.current.value, date: userDateRef.current.value, imageurl: userImageRef.current.value, categorey: categoreyRef.current.value }
+
+    async function btnedit(e) {
+        e.preventDefault()
+        let obj = { title, discription, image, date, categorey }
         console.log(obj)
+
+        let response = await axios.post(`http://localhost:5000/update-blog/${location.state._id}`, obj)
+        console.log(response)
+        if (response.data.sucess) {
+            alert("Blog Editing Sucussfully Completed")
+            navigate("/home")
+        } else {
+            alert("validation error")
+        }
     }
+    useEffect(() => {
+        setTitle(location.state.title)
+        setDiscrition(location.state.discription)
+        setImage(location.state.imageurl)
+        setDate(location.state.date)
+        setCategoery(location.state.categorey)
+    }, [])
     return (
         <div>
             <div className="center">
                 <div className="editing">
                     <h1 className='head-title' >Edit Your Blog</h1>
-                    <form id='frm1' >
+                    <div id='frm1' >
                         <div className='txt' >
                             <label >Title</label>
-                            <input type="text" ref={userTitleRef} required className='input' />
+                            <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }} required className='input' />
                         </div>
                         <div className="editing1">
                             <label htmlFor="">Discription</label>
-                            <input type="text" ref={userDiscriptionRef} required className='input2' />
+                            <input type="text" value={discription} onChange={(e) => { setDiscrition(e.target.value) }} required className='input2' />
                             {/* <textarea name="" id="" cols="30" rows="10"></textarea> */}
                         </div>
                         <div className="editing2">
                             <label htmlFor="">Image</label>
-                            <input type="text" ref={userImageRef} />
+                            <input type="text" value={image} onChange={(e) => { setImage(e.target.value) }} />
                         </div>
                         <div className="editing3">
-                            <input type="date" ref={userDateRef} required className='input3' />
+                            <input type="date" value={date} onChange={(e) => { setDate(e.target.value) }} required className='input3' />
                             {/* <label htmlFor="">Date </label> */}
 
                         </div>
                         <div className="custom-select">
 
-                            <select className='select-div' >
+                            <select className='select-div' value={categorey} onChange={(e) => { setCategoery(e.target.value) }} >
                                 <option value="0">Categary</option>
 
                                 <option value="Arts">Arts</option>
@@ -48,10 +74,9 @@ function BlogEditing() {
                                 <option value="Others">Others</option>
                             </select>
                         </div>
-                        <button className='btn-for-sub' onClick={btnedit} >SUBMIT</button>
+                        <button className='btn-for-sub' type='button' onClick={(e) => { btnedit(e) }} >SUBMIT</button>
 
-
-                    </form>
+                    </div>
                 </div>
             </div>
         </div >
