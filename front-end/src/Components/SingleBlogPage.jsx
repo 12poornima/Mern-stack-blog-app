@@ -52,7 +52,8 @@ function SingleBlogPage() {
                     }</h1>
                     <p className='para-lorem' >{location.state.discription
                     }</p>
-                    <img src={location.state.imageurl} className='image' alt="" />
+                    <im
+                        g src={location.state.imageurl} className='image' alt="" />
                     <div className='cat' >
                         categorey={location.state.categorey
                         }
